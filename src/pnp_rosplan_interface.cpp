@@ -39,7 +39,8 @@ private:
 
 public:
   void plan_callback(std_msgs::String plan){
-      ROS_INFO("Plan received: \n %s",plan.data.c_str());
+//       ROS_INFO("Plan received: \n %s",plan.data.c_str());
+      ROS_INFO("Plan received!");
       this->plan = plan;
 
       //write the plan message at plans/plan.txt
@@ -58,7 +59,7 @@ public:
       //generate the pnml
       // vector<ConditionalPlan> v = tsr.get_plan();
       // tsr.write_pnml(v);
-      ROS_INFO("PNML generated");
+      //ROS_INFO("PNML generated");
   }
 
   PNP_ROSPlan_Interface(){
